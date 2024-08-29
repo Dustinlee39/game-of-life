@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conway's Game of Life - Reprogrammed</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Conway's Game of Life</h1>
+    </header>
+    <main>
+        <button id="toggleControlsBtn">Show Controls</button>
+        <section id="controls" class="hidden">
+            <button id="playPauseBtn">Pause</button>
+            <button id="resetBtn">Reset</button>
+            <label for="speedSlider">Speed: </label>
+            <input type="range" id="speedSlider" min="1" max="100" value="50">
+            <label for="cellSizeInput">Cell Size: </label>
+            <input type="number" id="cellSizeInput" value="10" min="5" max="50">
+            <label for="patternSelect">Pattern: </label>
+            <select id="patternSelect">
+                <option value="random">Random</option>
+                <option value="glider">Glider</option>
+                <option value="blinker">Blinker</option>
+                <option value="custom">Custom</option>
+            </select>
+            <label for="cellColor">Cell Color: </label>
+            <input type="color" id="cellColor" value="#000000">
+            <label for="bgColor">Background Color: </label>
+            <input type="color" id="bgColor" value="#f0f0f0">
+            <input type="text" id="patternNameInput" placeholder="Enter pattern name">
+            <button id="savePatternBtn">Save Pattern</button>
+            <button id="loadPatternBtn">Load Pattern</button>
+            <button id="drawModeBtn">Enable Draw Mode</button>
+            <button id="toggleDebugBtn">Enable Debug Mode</button>
+        </section>
+        <canvas id="gameCanvas"></canvas>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
